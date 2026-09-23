@@ -22,6 +22,7 @@
 )
 
 / URL: #link("https://macconville.ie/masterclass")[macconville.ie/masterclass]
+/ Repo: #link("https://github.com/DaraMac/git-masterclass")[github.com/DaraMac/git-masterclass]
 
 == Downloading Git
 / Instructions: https://git-scm.com/install
@@ -34,7 +35,7 @@
 / GitLab: #link("https://gitlab.com")[gitlab.com]
 / Codeberg: #link("https://codeberg.org")[codeberg.org]
 / Forgejo: #link("https://forgejo.org")[forgejo.org]
-sourcehut
+/ SourceHut: #link("https://sourcehut.org")[sourcehut.org]
 cgit
 
 == Connecting GitHub
@@ -108,20 +109,6 @@ Demo
 - #link("https://github.com/unhappychoice/gitlogue")[cinema!]
 
 = Introduction
-== Links Again
-#figure(
-  link(
-    "https://macconville.ie/masterclass",
-    qrcode(
-      "https://macconville.ie/masterclass",
-      options: (scale: 4.0),
-      alt: "https://macconville.ie/masterclass",
-    ),
-  ),
-)
-
-/ URL: #link("https://macconville.ie/masterclass")[macconville.ie/masterclass]
-
 == Resources
 - https://wizardzines.com/git-cheat-sheet.pdf
 - https://ohshitgit.com
