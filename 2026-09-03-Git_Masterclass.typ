@@ -3,9 +3,9 @@
 #import "@preview/tiaoma:0.3.0": qrcode
 
 #show: radharc.with(
-  title: "Git Masterclass",
+  title: "Git Workshop (or Git Gud)",
   author: "Dara MacConville",
-  date: datetime(year: 2026, month: 9, day: 3),
+  date: datetime(year: 2026, month: 9, day: 23),
 )
 
 = Setup
