@@ -20,7 +20,7 @@
   ),
 )
 
-/ URL: #link("https://macconville.ie/git-notes")[macconville.ie/masterclass]
+/ URL: #link("https://macconville.ie/git-notes")[macconville.ie/git-notes]
 / Repo: #link("https://github.com/DaraMac/git-masterclass")[github.com/DaraMac/git-masterclass]
 
 == Downloading Git
