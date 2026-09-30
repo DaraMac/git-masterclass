@@ -5,28 +5,27 @@
 #show: radharc.with(
   title: "Git Workshop (or Git Gud)",
   author: "Dara MacConville",
-  date: datetime(year: 2026, month: 9, day: 23),
 )
 
 = Setup
 == Slides & Notes
 #figure(
   link(
-    "https://macconville.ie/masterclass",
+    "https://macconville.ie/git-notes",
     qrcode(
-      "https://macconville.ie/masterclass",
+      "https://macconville.ie/git-notes",
       options: (scale: 4.0),
-      alt: "https://macconville.ie/masterclass",
+      alt: "https://macconville.ie/git-notes",
     ),
   ),
 )
 
-/ URL: #link("https://macconville.ie/masterclass")[macconville.ie/masterclass]
+/ URL: #link("https://macconville.ie/git-notes")[macconville.ie/masterclass]
 / Repo: #link("https://github.com/DaraMac/git-masterclass")[github.com/DaraMac/git-masterclass]
 
 == Downloading Git
-/ Instructions: https://git-scm.com/install
-/ Linux: Use your package manager
+/ Instructions: #link("https://git-scm.com/install")[git-scm.com/install]
+/ Linux: Use package manager
 / Mac: Package manager (#link("https://brew.sh")[brew.sh]) or Xcode
 / Windows: Git Bash
 
@@ -36,21 +35,21 @@
 / Codeberg: #link("https://codeberg.org")[codeberg.org]
 / Forgejo: #link("https://forgejo.org")[forgejo.org]
 / SourceHut: #link("https://sourcehut.org")[sourcehut.org]
-cgit
+/ cgit: #link("https://git.zx2c4.com/cgit/about")[git.zx2c4.com/cgit/about]
 
 == Connecting GitHub
-- SSH! https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+- SSH! #link("https://docs.github.com/en/authentication/connecting-to-github-with-ssh")[docs.github.com/en/authentication/connecting-to-github-with-ssh]
 
 == Getting a GUI
 / Official list: #link("https://git-scm.com/tools/guis")[git-scm.com/tools/guis]
 / GitHub Desktop: #link("https://github.com/apps/desktop")[github.com/apps/desktop]
-/ Windows: Download from link
-/ Mac: Brew formula available
+/ Windows: GitHub desktop (download from link)
+/ Mac: GitHub desktop (Brew formula available)
 / Linux: #link("https://codeberg.org/ckruse/Gitte")[codeberg.org/ckruse/Gitte]
 
 == Editor Integration
 - RStudio
-- VSCode https://code.visualstudio.com/docs/sourcecontrol/quickstart
+- VSCode #link("https://code.visualstudio.com/docs/sourcecontrol/quickstart")[code.visualstudio.com/docs/sourcecontrol/quickstart]
 
 = Motivation
 == Workflow
@@ -106,15 +105,15 @@ Demo
 - Social network features
   - Stars
   - Following
-- #link("https://github.com/unhappychoice/gitlogue")[cinema!]
+- #link("https://github.com/unhappychoice/gitlogue")[Cinema!]
 
 = Introduction
 == Resources
-- https://wizardzines.com/git-cheat-sheet.pdf
-- https://ohshitgit.com
-- https://git-scm.com/book/en/v2
-- https://wizardzines.com/zines/git
-- https://book.the-turing-way.org/reproducible-research/vcs
+- #link("https://wizardzines.com/git-cheat-sheet.pdf")[wizardzines.com/git-cheat-sheet.pdf]
+- #link("https://ohshitgit.com")[ohshitgit.com]
+- #link("https://git-scm.com/book/en/v2")[git-scm.com/book/en/v2]
+- #link("https://wizardzines.com/zines/git")[wizardzines.com/zines/git]
+- #link("https://book.the-turing-way.org/reproducible-research/vcs")[book.the-turing-way.org/reproducible-research/vcs]
 
 == Model
 - Distributed version control system
@@ -122,11 +121,25 @@ Demo
 - Graphs!
 - Hashs
 
-== Setting up a repo
+== Configuring
+- ```sh git config --list --show-origin```
+- ```sh git config --global user.name "Your Name"```
+
+== Initialising a Repo
 ```sh git init```
+
+== Cloning
+```sh git clone url```
 
 == Status
 ```sh git status```
+
+== Ignoring
+- `.gitignore`
+- .DS_Store
+- \_\_pycache\_\_
+- `.Renviron`
+- Any other examples
 
 == Remotes
 ```sh git remote```
@@ -138,12 +151,8 @@ Demo
 - ```sh git commit```
 - ```sh git commit --amend```
 
-== Ignoring
-- `.gitignore`
-- .DS_Store
-- \_\_pycache\_\_
-- `.Renviron`
-- Any other examples
+== Pushing
+```sh git push```
 
 == Seeing History
 ```sh git log```
@@ -157,19 +166,9 @@ Demo
 - ```sh git diff```
 - ```sh git diff --staged```
 
-== Pushing
-```sh git push```
-
 == Pulling
 - ```sh git pull```
 - Not to be confused with a pull request
-
-== Cloning
-```sh git clone url```
-
-== Configuring
-- ```sh git config --list --show-origin```
-- ```sh git config --global user.name "Your Name"```
 
 == Merging
 - ```sh git merge name```
@@ -193,16 +192,10 @@ Demo
 - Add other people to private repos
 - Or just leave it public
 - Find a project
+- Pull Requests
 
 == Hooks
+- #link("https://pre-commit.com")[pre-commit.com]
 
 == Actions
-https://docs.github.com/en/actions
-
-== Exercise
-You should all o
-Call
-me
-Ishmael.
-
-ago
+- #link("https://docs.github.com/en/actions")[docs.github.com/en/actions]
