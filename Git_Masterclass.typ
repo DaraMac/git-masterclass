@@ -188,6 +188,7 @@ Demo
 == The Nuclear Option
 ```sh rm -rf```
 
+= Next Steps
 == Collaborating!
 - Add other people to private repos
 - Or just leave it public
