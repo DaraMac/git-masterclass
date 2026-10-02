@@ -38,17 +38,20 @@
 / cgit: #link("https://git.zx2c4.com/cgit/about")[git.zx2c4.com/cgit/about]
 
 == Connecting GitHub
-- SSH! #link("https://docs.github.com/en/authentication/connecting-to-github-with-ssh")[docs.github.com/en/authentication/connecting-to-github-with-ssh]
+- Follow this guide, line-by-line, no skipping!
+- #link(
+    "https://docs.github.com/en/authentication/connecting-to-github-with-ssh",
+  )[docs.github.com/en/authentication/connecting-to-github-with-ssh]
 
 == Getting a GUI
 / Official list: #link("https://git-scm.com/tools/guis")[git-scm.com/tools/guis]
 / GitHub Desktop: #link("https://github.com/apps/desktop")[github.com/apps/desktop]
 / Windows: GitHub desktop (download from link)
-/ Mac: GitHub desktop (Brew formula available)
+/ Mac: GitHub desktop (#link("https://formulae.brew.sh/cask/github")[Brew formula available])
 / Linux: #link("https://codeberg.org/ckruse/Gitte")[codeberg.org/ckruse/Gitte]
 
 == Editor Integration
-- RStudio
+- RStudio #link("https://happygitwithr.com/rstudio-git-github.html")[happygitwithr.com/rstudio-git-github.html]
 - VSCode #link("https://code.visualstudio.com/docs/sourcecontrol/quickstart")[code.visualstudio.com/docs/sourcecontrol/quickstart]
 
 = Motivation
@@ -113,6 +116,7 @@ Demo
 - #link("https://ohshitgit.com")[ohshitgit.com]
 - #link("https://git-scm.com/book/en/v2")[git-scm.com/book/en/v2]
 - #link("https://wizardzines.com/zines/git")[wizardzines.com/zines/git]
+- #link("https://happygitwithr.com")[happygitwithr.com]
 - #link("https://book.the-turing-way.org/reproducible-research/vcs")[book.the-turing-way.org/reproducible-research/vcs]
 
 == Model
