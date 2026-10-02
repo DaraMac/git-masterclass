@@ -51,8 +51,10 @@
 / Linux: #link("https://codeberg.org/ckruse/Gitte")[codeberg.org/ckruse/Gitte]
 
 == Editor Integration
-- RStudio #link("https://happygitwithr.com/rstudio-git-github.html")[happygitwithr.com/rstudio-git-github.html]
-- VSCode #link("https://code.visualstudio.com/docs/sourcecontrol/quickstart")[code.visualstudio.com/docs/sourcecontrol/quickstart]
+/ RStudio: #link("https://happygitwithr.com/rstudio-git-github.html")[happygitwithr.com/rstudio-git-github.html]
+/ VSCode: #link(
+    "https://code.visualstudio.com/docs/sourcecontrol/quickstart",
+  )[code.visualstudio.com/docs/sourcecontrol/quickstart]
 
 = Motivation
 == Workflow
