@@ -3,12 +3,12 @@
 #import "@preview/tiaoma:0.3.0": qrcode
 
 #show: radharc.with(
-  title: "Git Workshop (or Git Gud)",
+  title: "Git Workshop",
   author: "Dara MacConville",
 )
 
 = Setup
-== Slides & Notes
+== Source Files & Website
 #figure(
   link(
     "https://macconville.ie/git-notes",
@@ -56,12 +56,13 @@
     "https://code.visualstudio.com/docs/sourcecontrol/quickstart",
   )[code.visualstudio.com/docs/sourcecontrol/quickstart]
 
-= Motivation
-== Workflow
-Demo
+== Nicer Command Line
+- #link("https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git")[git plugin] from #link("https://ohmyz.sh")[Oh My Zsh]
+- #link("https://cli.github.com")[GitHub CLI (Command Line Interface)]
 
+= Motivation
 == Goals
-- By the end of this workshop, all your code will be backed up, and be done easily and continually from now on
+- All your code will be backed up, and be done easily and continually from now on
 
 == Version Control
 - A way of backing up, and also versioning any text
@@ -76,30 +77,29 @@ Demo
   - Code
   - Papers (if not already on Overleaf)
   - Notes
-  - Configuration files (dotfiles)
+  - Configuration files (#link("https://wiki.archlinux.org/title/Dotfiles")[dotfiles])
 
 == Datasets?
 - A small to mid size csv maybe
-- Possibly not pure text, so not such a good fit for VCS like git
+- Possibly not pure text, so not a good fit for version control systems
 - Maybe too big
 - But some will be appropriate
 - Should be backed up _somewhere_!
 
 == Reproducibility
 - Personal
-  - I want you to ask yourself, how long would it take to restore all your work on a brand new machine, and how difficult/easy would it be?
-  - No need for hypothetical, let's test right now!
+  - Ask yourself, how long would it take to restore your work and working environment on a brand new machine,
+  - No need for hypothetical, test right now!
 - For other researchers / users
-- Licence!
-- Demo
+- #link("https://choosealicense.com")[Licences!]
 
-== Other Things
-- Testing
-- CI/CD
-- Releases
+== Other Useful Things in Forges
+- #link("https://docs.github.com/en/actions/tutorials/build-and-test-code")[Testing] and #link("https://github.com/resources/articles/ci-cd")[CI/CD]
+- #link("https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases")[Releases]
 
 == Git
 - Most popular and thus well supported and resourced version control system
+- #link("https://xkcd.com/1597")[xkcd.com/1597]
 
 == GitHub
 - Most popular and thus well supported and resourced git forge
@@ -114,41 +114,49 @@ Demo
 
 = Introduction
 == Resources
-- #link("https://wizardzines.com/git-cheat-sheet.pdf")[wizardzines.com/git-cheat-sheet.pdf]
-- #link("https://ohshitgit.com")[ohshitgit.com]
-- #link("https://git-scm.com/book/en/v2")[git-scm.com/book/en/v2]
-- #link("https://wizardzines.com/zines/git")[wizardzines.com/zines/git]
-- #link("https://happygitwithr.com")[happygitwithr.com]
-- #link("https://book.the-turing-way.org/reproducible-research/vcs")[book.the-turing-way.org/reproducible-research/vcs]
+- #link("https://wizardzines.com/git-cheat-sheet.pdf")[wizardzines.com/git-cheat-sheet.pdf], save this!
+- #link("https://ohshitgit.com")[ohshitgit.com], some common problems
+- #link("https://git-scm.com/book/en/v2")[git-scm.com/book/en/v2], the *official* book on git
+- #link("https://wizardzines.com/zines/git")[wizardzines.com/zines/git], educational comics
+- #link("https://happygitwithr.com")[happygitwithr.com], specifically for R users
+- #link("https://book.the-turing-way.org/reproducible-research/vcs")[book.the-turing-way.org/reproducible-research/vcs], general guide for open data science
 
 == Model
-- Distributed version control system
+- Distributed version control system (VCS)
 - It's just files in `.git/`
-- Graphs!
-- Hashs
+- #link(
+    "https://medium.com/girl-writes-code/git-is-a-directed-acyclic-graph-and-what-the-heck-does-that-mean-b6c8dec65059",
+  )[Graphs!]
+- #link("https://pretextbook.org/gfa/html/commit-hashes.html")[Hashs]
 
 == Configuring
-- ```sh git config --list --show-origin```
 - ```sh git config --global user.name "Your Name"```
+- ```sh git config --global user.email yourEmail@example.com```
+- ```sh git config --global push.autoSetupRemote true```
+- ```sh git config --global init.defaultBranch main```
+- ```sh git config --list``` shows current settings
+- See book #link("https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup")[chapter on setting up] and #link("https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration")[chapter on configuration] for more information
 
 == Initialising a Repo
 ```sh git init```
 
+== Ignoring
+- Create a `.gitignore` file and add names
+- .DS_Store
+- \_\_pycache\_\_
+- `.Renviron`
+- Other language or development tool specific files
+
 == Cloning
-```sh git clone url```
+- ```sh git clone url```
+- Make sure to clone over SSH for repos you work on
 
 == Status
 ```sh git status```
 
-== Ignoring
-- `.gitignore`
-- .DS_Store
-- \_\_pycache\_\_
-- `.Renviron`
-- Any other examples
-
 == Remotes
-```sh git remote```
+- ```sh git remote```
+- Add ```sh --verbose``` or ```sh -v``` for more information
 
 == Adding
 ```sh git add```
@@ -161,12 +169,13 @@ Demo
 ```sh git push```
 
 == Seeing History
-```sh git log```
+- ```sh git log```
+- There's lots of options to change what you see
 
 == Branching
 - ```sh git branch name```
 - ```sh git switch name```
-- Create with `-c` flag
+  - Create with `-c` flag
 
 == Diffing
 - ```sh git diff```
@@ -178,7 +187,7 @@ Demo
 
 == Merging
 - ```sh git merge name```
-- Conflicts
+- This is the stage where conflicts might occur on multi-user repos
 
 == Tagging
 - ```sh git tag name```
@@ -192,17 +201,20 @@ Demo
 - ```sh git checkout hash -- path/to/file```
 
 == The Nuclear Option
-```sh rm -rf```
+- ```sh rm -rf```
+- Then clone the repo again
 
 = Next Steps
 == Collaborating!
 - Add other people to private repos
 - Or just leave it public
-- Find a project
-- Pull Requests
+- Find a project that's interesting to contribute to
+- #link("https://docs.github.com/en/pull-requests/reference/pull-requests")[Pull Requests]
 
 == Hooks
+- Located in a project's `.git/hooks/` folder
 - #link("https://pre-commit.com")[pre-commit.com]
+- #link("https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks")[Book chapter on hooks]
 
 == Actions
 - #link("https://docs.github.com/en/actions")[docs.github.com/en/actions]
