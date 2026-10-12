@@ -2,6 +2,9 @@
 
 #import "@preview/tiaoma:0.3.0": qrcode
 
+// red colour theme
+#let rubric = rgb(221, 0, 33)
+
 #show: radharc.with(
   title: "Git Workshop",
   author: "Dara MacConville",
@@ -19,6 +22,23 @@
     ),
   ),
 )
+
+// Set outgoing link style
+#let link-style(it) = {
+  it
+  if type(it.dest) != label {
+    sym.wj
+    h(0.12em)
+    sym.wj
+    super(
+      box(
+        height: 0.345em,
+        circle(radius: 0.109em, stroke: 0.0635em + rubric),
+      ),
+    )
+  }
+}
+#show link: link-style
 
 / URL: #link("https://macconville.ie/git-notes")[macconville.ie/git-notes]
 / Repo: #link("https://github.com/DaraMac/git-masterclass")[github.com/DaraMac/git-masterclass]
@@ -59,6 +79,7 @@
 == Nicer Command Line
 - #link("https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git")[git plugin] from #link("https://ohmyz.sh")[Oh My Zsh]
 - #link("https://cli.github.com")[GitHub CLI (Command Line Interface)]
+- #link("https://github.com/jj-vcs/jj")[```sh jj```]
 
 = Motivation
 == Goals
