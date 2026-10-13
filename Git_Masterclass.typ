@@ -127,7 +127,7 @@
 - Not official!
 
 == Fun Things
-- #link("https://docs.github.com/en/pages")[GitHub pages site]
+- #link("https://docs.github.com/en/pages")[GitHub Pages site]
 - Social network features
   - Stars
   - Following
