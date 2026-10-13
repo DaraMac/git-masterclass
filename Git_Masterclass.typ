@@ -79,7 +79,7 @@
 == Nicer Command Line
 - #link("https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git")[git plugin] from #link("https://ohmyz.sh")[Oh My Zsh]
 - #link("https://cli.github.com")[GitHub CLI (Command Line Interface)]
-- #link("https://github.com/jj-vcs/jj")[```sh jj```]
+- #link("https://github.com/jj-vcs/jj")[Jujutsu]
 
 = Motivation
 == Goals
@@ -127,7 +127,7 @@
 - Not official!
 
 == Fun Things
-- GitHub pages site
+- #link("https://docs.github.com/en/pages")[GitHub pages site]
 - Social network features
   - Stars
   - Following
@@ -163,8 +163,8 @@
 
 == Ignoring
 - Create a `.gitignore` file and add names
-- .DS_Store
-- \_\_pycache\_\_
+- `.DS_Store`
+- `__pycache__`
 - `.Renviron`
 - Other language or development tool specific files
 
